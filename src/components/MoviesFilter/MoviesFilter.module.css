@@ -1,0 +1,39 @@
+form {
+  display: flex;
+  align-items: center;
+}
+.nameFilter {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 24px;
+}
+
+input {
+  padding: 12px;
+  font: inherit;
+  cursor: pointer;
+  border: 2px solid #191d1e;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 10px;
+  border-radius: 8px;
+  outline: none;
+
+  &:hover {
+    color: tomato;
+    border: 2px solid tomato;
+  }
+}
+button {
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid #191d1e;
+  color: #191d1e;
+  font-weight: 600;
+  font-size: 20px;
+
+  &:hover {
+    color: tomato;
+    border: 3px solid tomato;
+  }
+}

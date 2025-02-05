@@ -1,0 +1,18 @@
+header {
+  border-bottom: solid 1px grey;
+  margin-bottom: 20px;
+}
+.link {
+  display: inline-flex;
+  padding: 14px;
+  font-size: 20px;
+  margin-left: 14px;
+  text-decoration: none;
+}
+.link:hover {
+  color: orangered;
+}
+.active {
+  background-color: teal;
+  color: #fff;
+}
