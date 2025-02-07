@@ -30,24 +30,32 @@ export default function MovieCast() {
     <div>
       {error && <ErrorMessage />}
       {loading && <Loader />}
-
-      <ul className={css.actorsList}>
-        {actors.map(({ id, profile_path, original_name, name, character }) => (
-          <li key={id}>
-            <img
-              width="200px"
-              src={
-                profile_path
-                  ? `https://image.tmdb.org/t/p/w500${profile_path}`
-                  : `https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg`
-              }
-              alt={original_name}
-            />
-            <p className={css.text}>{name}</p>
-            <p className={css.text}>Character: {character}</p>
-          </li>
-        ))}
-      </ul>
+      {actors.length !== 0 && (
+        <ul className={css.actorsList}>
+          {actors.map(
+            ({ id, profile_path, original_name, name, character }) => (
+              <li key={id}>
+                <img
+                  width="200px"
+                  src={
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w500${profile_path}`
+                      : `https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg`
+                  }
+                  alt={original_name}
+                />
+                <p className={css.text}>{name}</p>
+                <p className={css.text}>Character: {character}</p>
+              </li>
+            )
+          )}
+        </ul>
+      )}
+      {actors.length === 0 && (
+        <div className={css.message}>
+          We don't have any actors for this movie
+        </div>
+      )}
     </div>
   );
 }
